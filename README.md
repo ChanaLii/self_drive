@@ -16,7 +16,7 @@ github传送门：https://github.com/Timthony/self_drive
 （Use zth_car_control.py to control the front and rear movement of the car, and cooperate with zth_collect_data.py to operate manually, so that the car can collect data on its own runway. (the process is carried out in raspberry pie).）    
 3. 数据采集完成以后使用`zth_process_img.py`来对采集的数据进行处理，之前当前先完成一些数据清洗的工作。（电脑上执行）
 （After data acquisition is completed, zth_process_img.py is used to process the collected data, and some data cleaning work is completed before. (computer execution)）    
-4. 使用神经网络模型对数据进行训练`zth_train.py`，得到训练好的模型。（电脑上执行）创建目录`/self_drive-master/model`存放*.h5文件
+4. 使用神经网络模型对数据进行训练`zth_train.py`，得到训练好的模型。（电脑上执行）创建目录`/self_drive-master/model`存放*.h5文件，因为`zth_driver.py`读取模型的路径是`model/*.h5`
 （ using neural network model to train data, zth_train.py, get a trained model. (computer execution)）    
 5. 在树莓派小车上使用`zth_drive.py`和训练好的模型，载入模型，即可实现在原先跑道的自动驾驶。（树莓派上执行）    
 （Auto-driving on the original runway can be realized by using zth_drive and trained model in the raspberry dispatch car and loading the model. (raspberry pie execution)）    
