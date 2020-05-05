@@ -12,13 +12,13 @@ github传送门：https://github.com/Timthony/self_drive
 
 使用方法（Usage method）：    
 1. 先将树莓派小车硬件组装好（assemble the raspberry cart hardware.）    
-2. 使用zth_car_control.py来控制小车的前后左右移动，配合zth_collect_data.py来人工操作，使小车在自己制作的跑道进行数据采集。（该过程在树莓派进行）
+2. 使用zth_car_control.py来控制小车的前后左右移动，配合`zth_collect_data.py`来人工操作，使小车在自己制作的跑道进行数据采集。（该过程在树莓派进行）
 （Use zth_car_control.py to control the front and rear movement of the car, and cooperate with zth_collect_data.py to operate manually, so that the car can collect data on its own runway. (the process is carried out in raspberry pie).）    
-3. 数据采集完成以后使用zth_process_img.py来对采集的数据进行处理，之前当前先完成一些数据清洗的工作。（电脑上执行）
+3. 数据采集完成以后使用`zth_process_img.py`来对采集的数据进行处理，之前当前先完成一些数据清洗的工作。（电脑上执行）
 （After data acquisition is completed, zth_process_img.py is used to process the collected data, and some data cleaning work is completed before. (computer execution)）    
-4. 使用神经网络模型对数据进行训练zth_train.py，得到训练好的模型。（电脑上执行）
+4. 使用神经网络模型对数据进行训练`zth_train.py`，得到训练好的模型。（电脑上执行）创建目录`/self_drive-master/model`存放*.h5文件
 （ using neural network model to train data, zth_train.py, get a trained model. (computer execution)）    
-5. 在树莓派小车上使用zth_drive和训练好的模型，载入模型，即可实现在原先跑道的自动驾驶。（树莓派上执行）    
+5. 在树莓派小车上使用`zth_drive.py`和训练好的模型，载入模型，即可实现在原先跑道的自动驾驶。（树莓派上执行）    
 （Auto-driving on the original runway can be realized by using zth_drive and trained model in the raspberry dispatch car and loading the model. (raspberry pie execution)）    
 注意：只需要使用上述提到的代码即可，别的都是一些初始版本或者正在增加的一些新模块。 
 （Note: All you need to do is use the code mentioned above. Others are original versions or new modules that are being added.）    
